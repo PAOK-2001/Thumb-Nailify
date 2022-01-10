@@ -6,7 +6,7 @@ template             = cv.imread("reference.jpg")
 t_height, t_width, c = template.shape
 
 #Read image from which to generate thumb nail
-inputPath = "/home/paok/Documents/Thumbn-util/Input/"
+inputPath = "/home/paok/Documents/Thumb-Nailify/Input/"
 pictures = os.listdir(inputPath)
 for pic in pictures:
     #Read image from imput folder
@@ -19,5 +19,5 @@ for pic in pictures:
     # Resize picture
     thumbNail = cv.resize(currentPic, dimensions, interpolation = cv.INTER_AREA)
     # Write to output folder
-    cv.imwrite("/home/paok/Documents/Thumbn-util/Output/thumb_"+pic,thumbNail)
+    cv.imwrite("/home/paok/Documents/Thumb-Nailify/Output/"+pic,thumbNail)
 print(pictures)
